@@ -19,6 +19,14 @@
 		93396B132250096B00BF95E4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B122250096B00BF95E4 /* Category.swift */; };
 		93396B162250099300BF95E4 /* CategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B152250099300BF95E4 /* CategoryTests.swift */; };
 		93396B1822500ABB00BF95E4 /* CategoryDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B1722500ABB00BF95E4 /* CategoryDataSourceTests.swift */; };
+		93396B1B2250239C00BF95E4 /* SubCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B1A2250239C00BF95E4 /* SubCategoriesViewController.swift */; };
+		93396B1E225023F500BF95E4 /* SubCategoriesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B1D225023F500BF95E4 /* SubCategoriesViewControllerTests.swift */; };
+		93396B202250308500BF95E4 /* SubCategoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B1F2250308500BF95E4 /* SubCategoryDataSource.swift */; };
+		93396B22225030B500BF95E4 /* SubCategoryDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B21225030B500BF95E4 /* SubCategoryDataSourceTests.swift */; };
+		93396B242250312500BF95E4 /* SubCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B232250312500BF95E4 /* SubCategory.swift */; };
+		93396B262250314B00BF95E4 /* SubCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B252250314B00BF95E4 /* SubCategoryTests.swift */; };
+		93396B282250365600BF95E4 /* SubCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B272250365600BF95E4 /* SubCategoryViewController.swift */; };
+		93396B2A2250367C00BF95E4 /* SubCategoryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B292250367C00BF95E4 /* SubCategoryViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +65,14 @@
 		93396B122250096B00BF95E4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		93396B152250099300BF95E4 /* CategoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTests.swift; sourceTree = "<group>"; };
 		93396B1722500ABB00BF95E4 /* CategoryDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataSourceTests.swift; sourceTree = "<group>"; };
+		93396B1A2250239C00BF95E4 /* SubCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoriesViewController.swift; sourceTree = "<group>"; };
+		93396B1D225023F500BF95E4 /* SubCategoriesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoriesViewControllerTests.swift; sourceTree = "<group>"; };
+		93396B1F2250308500BF95E4 /* SubCategoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryDataSource.swift; sourceTree = "<group>"; };
+		93396B21225030B500BF95E4 /* SubCategoryDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryDataSourceTests.swift; sourceTree = "<group>"; };
+		93396B232250312500BF95E4 /* SubCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategory.swift; sourceTree = "<group>"; };
+		93396B252250314B00BF95E4 /* SubCategoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryTests.swift; sourceTree = "<group>"; };
+		93396B272250365600BF95E4 /* SubCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryViewController.swift; sourceTree = "<group>"; };
+		93396B292250367C00BF95E4 /* SubCategoryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +123,10 @@
 		93396ADB224FF61800BF95E4 /* Octo */ = {
 			isa = PBXGroup;
 			children = (
+				93396B192250238F00BF95E4 /* ViewControllers */,
 				93396B112250095E00BF95E4 /* Model */,
 				93396B0D225008C000BF95E4 /* DataSource */,
 				93396ADC224FF61800BF95E4 /* AppDelegate.swift */,
-				93396ADE224FF61800BF95E4 /* CategoriesViewController.swift */,
 				93396AE0224FF61800BF95E4 /* Main.storyboard */,
 				93396AE3224FF61900BF95E4 /* Assets.xcassets */,
 				93396AE5224FF61900BF95E4 /* LaunchScreen.storyboard */,
@@ -122,11 +138,11 @@
 		93396AF0224FF61A00BF95E4 /* OctoTests */ = {
 			isa = PBXGroup;
 			children = (
+				93396B1C225023D400BF95E4 /* ViewControllerTests */,
 				93396B142250098200BF95E4 /* ModelTests */,
 				93396B102250090000BF95E4 /* DataSourceTests */,
 				93396AF1224FF61A00BF95E4 /* OctoTests.swift */,
 				93396AF3224FF61A00BF95E4 /* Info.plist */,
-				93396B0B224FFDA700BF95E4 /* CategoriesViewControllerTests.swift */,
 			);
 			path = OctoTests;
 			sourceTree = "<group>";
@@ -144,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				93396B0E225008E800BF95E4 /* CategoryDataSource.swift */,
+				93396B1F2250308500BF95E4 /* SubCategoryDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -152,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				93396B1722500ABB00BF95E4 /* CategoryDataSourceTests.swift */,
+				93396B21225030B500BF95E4 /* SubCategoryDataSourceTests.swift */,
 			);
 			path = DataSourceTests;
 			sourceTree = "<group>";
@@ -160,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				93396B122250096B00BF95E4 /* Category.swift */,
+				93396B232250312500BF95E4 /* SubCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,8 +187,29 @@
 			isa = PBXGroup;
 			children = (
 				93396B152250099300BF95E4 /* CategoryTests.swift */,
+				93396B252250314B00BF95E4 /* SubCategoryTests.swift */,
 			);
 			path = ModelTests;
+			sourceTree = "<group>";
+		};
+		93396B192250238F00BF95E4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				93396ADE224FF61800BF95E4 /* CategoriesViewController.swift */,
+				93396B1A2250239C00BF95E4 /* SubCategoriesViewController.swift */,
+				93396B272250365600BF95E4 /* SubCategoryViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		93396B1C225023D400BF95E4 /* ViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				93396B0B224FFDA700BF95E4 /* CategoriesViewControllerTests.swift */,
+				93396B1D225023F500BF95E4 /* SubCategoriesViewControllerTests.swift */,
+				93396B292250367C00BF95E4 /* SubCategoryViewControllerTests.swift */,
+			);
+			path = ViewControllerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,10 +343,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93396B242250312500BF95E4 /* SubCategory.swift in Sources */,
+				93396B282250365600BF95E4 /* SubCategoryViewController.swift in Sources */,
 				93396ADF224FF61800BF95E4 /* CategoriesViewController.swift in Sources */,
 				93396B0F225008E800BF95E4 /* CategoryDataSource.swift in Sources */,
 				93396ADD224FF61800BF95E4 /* AppDelegate.swift in Sources */,
+				93396B1B2250239C00BF95E4 /* SubCategoriesViewController.swift in Sources */,
 				93396B132250096B00BF95E4 /* Category.swift in Sources */,
+				93396B202250308500BF95E4 /* SubCategoryDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,10 +358,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93396B262250314B00BF95E4 /* SubCategoryTests.swift in Sources */,
+				93396B2A2250367C00BF95E4 /* SubCategoryViewControllerTests.swift in Sources */,
 				93396B1822500ABB00BF95E4 /* CategoryDataSourceTests.swift in Sources */,
 				93396B162250099300BF95E4 /* CategoryTests.swift in Sources */,
+				93396B1E225023F500BF95E4 /* SubCategoriesViewControllerTests.swift in Sources */,
 				93396B0C224FFDA700BF95E4 /* CategoriesViewControllerTests.swift in Sources */,
 				93396AF2224FF61A00BF95E4 /* OctoTests.swift in Sources */,
+				93396B22225030B500BF95E4 /* SubCategoryDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

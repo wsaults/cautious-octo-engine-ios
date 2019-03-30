@@ -1,5 +1,5 @@
 //
-//  Category.swift
+//  SubCategory.swift
 //  Octo
 //
 //  Created by Will Saults on 3/30/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Category {
+class SubCategory {
     var name: String
     
     init(name: String) {

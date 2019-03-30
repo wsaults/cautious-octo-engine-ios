@@ -19,7 +19,12 @@ class CategoriesViewControllerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        guard let categoriesController = UIStoryboard(name: "Main", bundle: Bundle(for: CategoriesViewController.self)).instantiateInitialViewController() as? CategoriesViewController else {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let navigationController = storyboard.instantiateInitialViewController() as? UINavigationController else {
+            return XCTFail("Could not instantiate UINavigationController")
+        }
+        
+        guard let categoriesController = navigationController.topViewController as? CategoriesViewController else {
             return XCTFail("Could not instantiate CategoriesViewController")
         }
         
@@ -27,7 +32,7 @@ class CategoriesViewControllerTests: XCTestCase {
         self.categoriesController.loadViewIfNeeded()
         tableView = self.categoriesController.tableView
         
-        guard let dataSource  = tableView.dataSource as? CategoryDataSource else {
+        guard let dataSource = tableView.dataSource as? CategoryDataSource else {
             return XCTFail("TableView should have a CategoryDataSource")
         }
         
@@ -36,9 +41,9 @@ class CategoriesViewControllerTests: XCTestCase {
     }
     
     func testTableOfCategoriesIsSetup() {
-        XCTAssertNotNil(categoriesController?.tableView, "Subject should have a tableview")
-        XCTAssertTrue(categoriesController?.tableView?.delegate === categoriesController, "TableView delegate is set correctly")
-        XCTAssertNotNil(categoriesController?.tableView?.dataSource is CategoryDataSource, "Subject should have a datasource")
+        XCTAssertNotNil(categoriesController.tableView, "categoriesController should have a tableView")
+        XCTAssertTrue(delegate === categoriesController, "Delegate should be categoriesController")
+        XCTAssertNotNil(categoriesController.tableView.dataSource is CategoryDataSource, "Subject should have a datasource")
     }
     
     func testTableViewHasCells() {
@@ -46,12 +51,16 @@ class CategoriesViewControllerTests: XCTestCase {
         XCTAssertNotNil(cell, "TableView has a cell with id: 'Cell'")
     }
     
-    func testTableViewDelegateIsViewController() {
-        XCTAssertTrue(delegate === categoriesController, "Delegate should be categoriesController")
-    }
-    
     func testCellHasDisclosureIndicator() {
         let cell = dataSource.tableView(tableView, cellForRowAt: IndexPath(row: 0, section: 0))
         XCTAssertEqual(cell.accessoryType, .disclosureIndicator, "Cell should have disclosure indicator")
+    }
+    
+    func testCanTapTableCell() {
+        let cell = categoriesController.tableView.dataSource?.tableView(categoriesController.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
+        
+        categoriesController.performSegue(withIdentifier: "ShowSubCategories", sender: cell)
+        
+        XCTAssertNotNil(categoriesController.presentedViewController is SubCategoriesViewController)
     }
 }
