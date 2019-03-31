@@ -1,5 +1,5 @@
 //
-//  SubCategoriesViewController.swift
+//  SubCategoryViewController.swift
 //  Octo
 //
 //  Created by Will Saults on 3/30/19.
@@ -8,17 +8,18 @@
 
 import UIKit
 
-class SubCategoriesViewController: UIViewController {
+class SkillsViewController: UIViewController {
     
-    private var dataSource = SubCategoryDataSource()
+    private var dataSource = SkillsDataSource()
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            let names = ["Gaming, Hardware, IT, Programming, Software, Tech Repairs"]
+            let names = ["Swift", "TypeScript", "JavaScript", "Java", "Pivotal Cloud Foundry"]
             for name in names {
-                let subCategory = SubCategory(name: name)
-                dataSource.subCategories.append(subCategory)
+                let skill = Skill(name: name)
+                dataSource.skills.append(skill)
             }
+            
             tableView.dataSource = dataSource
         }
     }

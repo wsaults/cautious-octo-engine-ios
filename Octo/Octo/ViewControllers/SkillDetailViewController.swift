@@ -1,5 +1,5 @@
 //
-//  SubCategoryViewController.swift
+//  SkillDetailViewController.swift
 //  Octo
 //
 //  Created by Will Saults on 3/30/19.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class SubCategoryViewController: UIViewController {
+class SkillDetailViewController: UIViewController {
     
 }

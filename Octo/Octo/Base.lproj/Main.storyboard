@@ -77,7 +77,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Nrl-Ko-uCz" kind="show" identifier="ShowSubCategoryDetail" id="xTO-fq-u6g"/>
+                                            <segue destination="Nrl-Ko-uCz" kind="show" identifier="ShowSkillsList" id="xTO-fq-u6g"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -103,20 +103,66 @@
             </objects>
             <point key="canvasLocation" x="2726.0869565217395" y="20.758928571428569"/>
         </scene>
-        <!--Sub Category View Controller-->
+        <!--Skills View Controller-->
         <scene sceneID="Cp0-mE-5y1">
             <objects>
-                <viewController id="Nrl-Ko-uCz" customClass="SubCategoryViewController" customModule="Octo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SkillsViewController" id="Nrl-Ko-uCz" customClass="SkillsViewController" customModule="Octo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jEd-eG-KNG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bds-5T-97E">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="rSf-VM-16N">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rSf-VM-16N" id="1i4-2e-KIm">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="3N4-kl-jvl" kind="show" identifier="ShowSkillDetail" id="9FC-Wf-rlo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="Nrl-Ko-uCz" id="Xyp-mp-tMl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bds-5T-97E" firstAttribute="leading" secondItem="Lln-yP-BXr" secondAttribute="leading" id="7wM-S8-S6X"/>
+                            <constraint firstItem="bds-5T-97E" firstAttribute="bottom" secondItem="Lln-yP-BXr" secondAttribute="bottom" id="FuG-UC-eWm"/>
+                            <constraint firstItem="bds-5T-97E" firstAttribute="trailing" secondItem="Lln-yP-BXr" secondAttribute="trailing" id="amK-Dw-dBb"/>
+                            <constraint firstItem="bds-5T-97E" firstAttribute="top" secondItem="Lln-yP-BXr" secondAttribute="top" id="xth-7x-aab"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Lln-yP-BXr"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="bds-5T-97E" id="gZ7-Ug-N7g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4uK-Hg-KXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3493" y="21"/>
+            <point key="canvasLocation" x="3492.753623188406" y="20.758928571428569"/>
+        </scene>
+        <!--Skill Detail View Controller-->
+        <scene sceneID="OWr-mk-hYi">
+            <objects>
+                <viewController storyboardIdentifier="SkillDetailViewController" id="3N4-kl-jvl" customClass="SkillDetailViewController" customModule="Octo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mX6-SL-CCV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="11w-kT-lT7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s9m-vH-EFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4278" y="21"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qih-GN-bV4">

@@ -1,5 +1,5 @@
 //
-//  CategoryTests.swift
+//  SkillsTests.swift
 //  OctoTests
 //
 //  Created by Will Saults on 3/30/19.
@@ -9,10 +9,10 @@
 import XCTest
 @testable import Octo
 
-class CategoryTests: XCTestCase {
-
+class SkillsTests: XCTestCase {
+    
     func testCategoryHasAName() {
-        let category = Category(name: "Technology")
-        XCTAssertEqual(category.name, "Technology")
+        let category = Skill(name: "iOS")
+        XCTAssertEqual(category.name, "iOS")
     }
 }

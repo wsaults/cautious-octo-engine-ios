@@ -17,7 +17,7 @@ class CategoryDataSourceTests: XCTestCase {
         super.setUp()
         dataSource = CategoryDataSource()
         
-        let category = Category(name: "Programming")
+        let category = Category(name: "Technology")
         dataSource.categories.append(category)
     }
 
@@ -36,7 +36,7 @@ class CategoryDataSourceTests: XCTestCase {
         tableView.estimatedRowHeight = 44
         
         let cell = dataSource.tableView(tableView, cellForRowAt: IndexPath(row: 0, section: 0))
-        XCTAssertEqual(cell.textLabel?.text, "Programming", "First cell text should be Programming")
+        XCTAssertEqual(cell.textLabel?.text, "Technology", "First cell text should be Technology")
     }
     
     func testHasZeroSectionsWhenThereAreNoCategories() {

@@ -37,9 +37,9 @@ class SubCategoriesViewControllerTests: XCTestCase {
     }
     
     func testTableOfSubCategoriesIsSetup() {
-        XCTAssertNotNil(subCategoriesController.tableView, "subCategoriesController should hava a tableView")
-        XCTAssertTrue(delegate === subCategoriesController, "Delegate should be subCategoriesController")
-        XCTAssertNotNil(subCategoriesController.tableView.dataSource is SubCategoryDataSource, "subCategoriesController should have a datasource")
+        XCTAssertNotNil(subCategoriesController.tableView, "SubCategoriesViewController should hava a tableView")
+        XCTAssertTrue(delegate === subCategoriesController, "Delegate should be SubCategoriesViewController")
+        XCTAssertNotNil(subCategoriesController.tableView.dataSource is SubCategoryDataSource, "SubCategoriesViewController should have a datasource")
     }
     
     func testTableViewHasCells() {
@@ -55,8 +55,8 @@ class SubCategoriesViewControllerTests: XCTestCase {
     func testCanTapTableCell() {
         let cell = subCategoriesController.tableView.dataSource?.tableView(subCategoriesController.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
         
-        subCategoriesController.performSegue(withIdentifier: "ShowSubCategoryDetail", sender: cell)
+        subCategoriesController.performSegue(withIdentifier: "ShowSkillsList", sender: cell)
         
-        XCTAssertNotNil(subCategoriesController.presentedViewController is SubCategoryViewController)
+        XCTAssertNotNil(subCategoriesController.presentedViewController is SkillsViewController)
     }
 }

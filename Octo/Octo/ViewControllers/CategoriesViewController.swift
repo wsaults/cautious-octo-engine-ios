@@ -14,7 +14,7 @@ class CategoriesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            let names = ["Programming", "Public Speaking", "Drawing", "Spanish"]
+            let names = ["Academics", "The Arts", "Auto", "Business", "Lifestyle", "Health & Wellness", "Language", "Outdoors", "Remedail", "Sporta & Games", "Technology", "Trades"]
             for name in names {
                 let category = Category(name: name)
                 dataSource.categories.append(category)

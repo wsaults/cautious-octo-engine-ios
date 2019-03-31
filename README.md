@@ -6,22 +6,28 @@ As a user I would like to take a skills based test in order to better represent 
 
 ### Stories
 
-### Story - I see a list of skill categories
+### ✅ Story - I see a list of skill categories
 
 `GIVEN:` I have opened the app.
 `THEN:` I see a list of skill categories.
 
-### Story - I see a list of skill sub categories
+`Ex: Sports & Games, Technology, Trades`
+
+### ✅ Story - I see a list of skill sub categories
 
 `GIVEN:` I can see a list of skill categories.
 `WHEN:` I tap on a category.
 `THEN:` I see a list of skill sub categories.
 
-### Story - I see a list of skills
+`Ex: Technology > Gaming, Hardware, IT, Programming, Software, Tech Repairs`
+
+### 👨🏼‍💻 Story - I see a list of skills
 
 `GIVEN:` I can see a list of skill sub categories.
-`WHEN:` I tap on a category.
+`WHEN:` I tap on a sub category.
 `THEN:` I see a list of skills.
+
+`Ex: Swift, TypeScript, JavaScript, Java`
 
 ### Story - I see a Multiple choice question
 
