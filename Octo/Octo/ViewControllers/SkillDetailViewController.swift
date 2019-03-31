@@ -27,6 +27,7 @@ class SkillDetailViewController: UIViewController {
     }
     
     @IBOutlet weak var numberOfQuestionsLabel: UILabel!
+    @IBOutlet weak var continueButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,12 @@ class SkillDetailViewController: UIViewController {
     }
     
     func updateNumberOfQuestionsLabel() {
-        numberOfQuestionsLabel.text = "1 of \(dataSource.questions.count) Questions"
+        numberOfQuestionsLabel?.text = "1 of \(dataSource.questions.count) Questions"
+    }
+}
+
+extension SkillDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.continueButton?.isHidden = false
     }
 }

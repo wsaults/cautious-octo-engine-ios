@@ -158,7 +158,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xTt-u0-3s7">
-                                <rect key="frame" x="0.0" y="116" width="414" height="746"/>
+                                <rect key="frame" x="0.0" y="117" width="414" height="684"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="gs9-07-JOK">
@@ -183,20 +183,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTv-XO-Hgg">
+                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="pVn-Yi-o66"/>
+                                </constraints>
+                                <state key="normal" title="Continue"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="CTv-XO-Hgg" firstAttribute="bottom" secondItem="11w-kT-lT7" secondAttribute="bottom" id="2QD-Bj-QW2"/>
                             <constraint firstItem="xTt-u0-3s7" firstAttribute="trailing" secondItem="11w-kT-lT7" secondAttribute="trailing" id="46l-H3-TrP"/>
                             <constraint firstItem="tWk-Ln-HKl" firstAttribute="leading" secondItem="11w-kT-lT7" secondAttribute="leading" constant="20" id="6mQ-TE-Whb"/>
+                            <constraint firstItem="CTv-XO-Hgg" firstAttribute="trailing" secondItem="11w-kT-lT7" secondAttribute="trailing" id="7e5-GB-fkh"/>
                             <constraint firstItem="tWk-Ln-HKl" firstAttribute="top" secondItem="11w-kT-lT7" secondAttribute="top" id="J4E-wn-Dxb"/>
                             <constraint firstItem="xTt-u0-3s7" firstAttribute="leading" secondItem="11w-kT-lT7" secondAttribute="leading" id="JLd-vj-L4i"/>
-                            <constraint firstItem="xTt-u0-3s7" firstAttribute="bottom" secondItem="11w-kT-lT7" secondAttribute="bottom" id="QPl-LH-5Kn"/>
-                            <constraint firstItem="xTt-u0-3s7" firstAttribute="top" secondItem="tWk-Ln-HKl" secondAttribute="bottom" constant="-1" id="VBS-An-eic"/>
+                            <constraint firstItem="xTt-u0-3s7" firstAttribute="top" secondItem="tWk-Ln-HKl" secondAttribute="bottom" id="VBS-An-eic"/>
                             <constraint firstItem="tWk-Ln-HKl" firstAttribute="trailing" secondItem="11w-kT-lT7" secondAttribute="trailing" constant="-20" id="WKl-m0-3HE"/>
+                            <constraint firstItem="CTv-XO-Hgg" firstAttribute="leading" secondItem="11w-kT-lT7" secondAttribute="leading" id="gQ6-pV-Y78"/>
+                            <constraint firstItem="CTv-XO-Hgg" firstAttribute="top" secondItem="xTt-u0-3s7" secondAttribute="bottom" constant="1" id="qCw-WZ-KXg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="11w-kT-lT7"/>
                     </view>
                     <connections>
+                        <outlet property="continueButton" destination="CTv-XO-Hgg" id="UHJ-oK-d8v"/>
                         <outlet property="numberOfQuestionsLabel" destination="tWk-Ln-HKl" id="eGH-II-8SQ"/>
                         <outlet property="tableView" destination="xTt-u0-3s7" id="AJ4-LN-sqP"/>
                     </connections>
