@@ -29,34 +29,40 @@ As a user I would like to take a skills based test in order to better represent 
 
 `Ex: Swift, TypeScript, JavaScript, Java`
 
-### 👨🏼‍💻 Story - I see a Multiple choice question
+### ✅ Story - I see a Multiple choice question
 
 `GIVEN:` I can see a list of skills.
 `WHEN:` I tap on a skill.
-`THEN:` I see a multiple choice question.
+`THEN:` I see a multiple choice question with 4 answers.
 
-### Story - I see '1 of 10 questions'
+### ✅ Story - I see '1 of 10 Questions'
 
-`GIVEN:` I can see a list of skills.
-`THEN:` I see '1 of 10 questions'.
+`GIVEN:` I can see a multiple choice question.
+`THEN:` I see '1 of 10 Questions'.
 
-### Story - I see the 'Next Question' button
+### ✅ Story - I see the 'Next Question' button
 
 `GIVEN:` I see a Multiple choice question.
 `WHEN:` I tap on an answer.
 `THEN:` I see the 'Next Question' button.
+
+### 👨🏼‍💻 Story - The answer turns red
+
+`GIVEN:` I tap on an answer.
+`WHEN:` When the answer is wrong.
+`THEN:` The answer turns red.
+
+### Story - I Cannot tap another answer
+
+`GIVEN:` I tap on an answer.
+`THEN:` The answer turns red.
+`AND:` I cannot tap another answer
 
 ### Story - The answer turns green
 
 `GIVEN:` I tap on an answer.
 `WHEN:` When the answer is correct.
 `THEN:` The answer turns green.
-
-### Story - The answer turns red
-
-`GIVEN:` I tap on an answer.
-`WHEN:` When the answer is wrong.
-`THEN:` The answer turns red.
 
 ### Story - I see '2 of 10 questions'
 
