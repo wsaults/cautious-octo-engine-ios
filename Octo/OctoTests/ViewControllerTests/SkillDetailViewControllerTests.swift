@@ -64,12 +64,20 @@ class SkillDetailViewControllerTests: XCTestCase {
         XCTAssertEqual(skillDetailViewController.numberOfQuestionsLabel.text, "1 of 10 Questions", "Number of questions label should match")
     }
     
-    func testTappingACellShowsContinueButton() {
+    func testTappingAnAnswerShowsContinueButton() {
         XCTAssertTrue(skillDetailViewController.continueButton.isHidden, "Continue button should not be hidden")
         
         delegate.tableView?(tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
         
         XCTAssertTrue(!skillDetailViewController.continueButton.isHidden, "Continue button should be visible")
         XCTAssertEqual(skillDetailViewController.continueButton.titleLabel?.text, "Continue", "Continue button text should match")
+    }
+    
+    func testTappingAnAnswerDisabledTheTable() {
+        XCTAssertTrue(tableView.isUserInteractionEnabled, "User should be able to interact with the table")
+        
+        delegate.tableView?(tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+        
+        XCTAssertTrue(!tableView.isUserInteractionEnabled, "User should not be able to interact with the table")
     }
 }

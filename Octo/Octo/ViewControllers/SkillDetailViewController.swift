@@ -46,6 +46,7 @@ extension SkillDetailViewController: UITableViewDelegate {
             cell.contentView.backgroundColor = UIColor.red
         }
 
+        tableView.isUserInteractionEnabled = false
         self.continueButton?.isHidden = false
     }
 }
