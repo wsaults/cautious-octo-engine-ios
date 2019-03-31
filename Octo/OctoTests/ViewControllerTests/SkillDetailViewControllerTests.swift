@@ -46,4 +46,21 @@ class SkillDetailViewControllerTests: XCTestCase {
         let cell = skillDetailViewController.tableView.dequeueReusableCell(withIdentifier: "Cell")
         XCTAssertNotNil(cell, "TableView has a cell with id: 'Cell'")
     }
+    
+    func testNumberOfQuestionsLabelShowsCount() {
+        XCTAssertEqual(skillDetailViewController.numberOfQuestionsLabel.text, "1 of 1 Questions", "Number of questions label should match")
+    }
+    
+    func testNumberOfQuestionsLabelShows1Of10Questions() {
+        dataSource.questions = []
+        
+        for i in 0..<10 {
+            let question = Question(text: "Q\(i)?")
+            dataSource.questions.append(question)
+        }
+        
+        skillDetailViewController.updateNumberOfQuestionsLabel()
+        
+        XCTAssertEqual(skillDetailViewController.numberOfQuestionsLabel.text, "1 of 10 Questions", "Number of questions label should match")
+    }
 }

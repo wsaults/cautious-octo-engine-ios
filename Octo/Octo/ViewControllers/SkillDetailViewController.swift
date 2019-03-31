@@ -26,7 +26,15 @@ class SkillDetailViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var numberOfQuestionsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        updateNumberOfQuestionsLabel()
+    }
+    
+    func updateNumberOfQuestionsLabel() {
+        numberOfQuestionsLabel.text = "1 of \(dataSource.questions.count) Questions"
     }
 }
