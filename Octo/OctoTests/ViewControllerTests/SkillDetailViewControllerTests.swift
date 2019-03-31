@@ -10,8 +10,40 @@ import XCTest
 @testable import Octo
 
 class SkillDetailViewControllerTests: XCTestCase {
+    
+    var skillDetailViewController: SkillDetailViewController!
+    var dataSource: QuestionsDataSource!
+    var tableView: UITableView!
+    var delegate: UITableViewDelegate!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let skillDetailViewController = storyboard.instantiateViewController(withIdentifier: "SkillDetailViewController") as? SkillDetailViewController else {
+            return XCTFail("Could not instantiate SkillDetailViewController")
+        }
+        
+        self.skillDetailViewController = skillDetailViewController
+        self.skillDetailViewController.loadViewIfNeeded()
+        tableView = self.skillDetailViewController.tableView
+        
+        guard let dataSource = tableView.dataSource as? QuestionsDataSource else {
+            return XCTFail("TableView should have a QuestionsDataSource")
+        }
+        
+        self.dataSource = dataSource
+        delegate = tableView.delegate
+    }
+    
+    func testTableOfskillDetailViewControllerIsSetup() {
+        XCTAssertNotNil(skillDetailViewController.tableView, "SkillDetailViewController should have a tableView")
+        XCTAssertTrue(delegate === skillDetailViewController, "Delegate should be SkillDetailViewController")
+        XCTAssertNotNil(skillDetailViewController.tableView.dataSource is QuestionsDataSource, "SkillDetailViewController should have a datasource")
+    }
+    
+    func testTableViewHasCells() {
+        let cell = skillDetailViewController.tableView.dequeueReusableCell(withIdentifier: "Cell")
+        XCTAssertNotNil(cell, "TableView has a cell with id: 'Cell'")
     }
 }

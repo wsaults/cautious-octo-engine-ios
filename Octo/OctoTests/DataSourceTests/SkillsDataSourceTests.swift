@@ -39,12 +39,12 @@ class SkillsDataSourceTests: XCTestCase {
         XCTAssertEqual(cell.textLabel?.text, "iOS", "First cell text should be iOS")
     }
     
-    func testHasZeroSectionsWhenThereAreNoSubCategories() {
+    func testHasZeroSectionsWhenThereAreNoSkills() {
         dataSource.skills = []
         XCTAssertEqual(dataSource.numberOfSections(in: tableView), 0, "TableView should have zero sections")
     }
     
-    func testHasOneSectionsWhenSubCategoriesArePresent() {
+    func testHasOneSectionsWhenSkillsArePresent() {
         XCTAssertEqual(dataSource.numberOfSections(in: tableView), 1, "TableView should have one section when at least one Skill is present")
     }
 }

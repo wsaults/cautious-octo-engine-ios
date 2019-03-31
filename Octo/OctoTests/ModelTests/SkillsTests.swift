@@ -12,7 +12,7 @@ import XCTest
 class SkillsTests: XCTestCase {
     
     func testCategoryHasAName() {
-        let category = Skill(name: "iOS")
-        XCTAssertEqual(category.name, "iOS")
+        let skill = Skill(name: "iOS")
+        XCTAssertEqual(skill.name, "iOS")
     }
 }

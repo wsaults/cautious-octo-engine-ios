@@ -33,6 +33,12 @@
 		93396B3222503C6B00BF95E4 /* SkillsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B3122503C6B00BF95E4 /* SkillsTests.swift */; };
 		93396B3422504B0000BF95E4 /* SkillDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B3322504B0000BF95E4 /* SkillDetailViewController.swift */; };
 		93396B3622504B1E00BF95E4 /* SkillDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B3522504B1E00BF95E4 /* SkillDetailViewControllerTests.swift */; };
+		93396B382250FCC900BF95E4 /* QuestionsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B372250FCC900BF95E4 /* QuestionsDataSource.swift */; };
+		93396B3A2250FCF200BF95E4 /* QuestionsDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B392250FCF200BF95E4 /* QuestionsDataSourceTests.swift */; };
+		93396B3C2250FDA100BF95E4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B3B2250FDA100BF95E4 /* Question.swift */; };
+		93396B3E2250FDB300BF95E4 /* QuestionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B3D2250FDB300BF95E4 /* QuestionTests.swift */; };
+		93396B40225100D700BF95E4 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B3F225100D700BF95E4 /* Answer.swift */; };
+		93396B42225100F500BF95E4 /* AnswerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93396B41225100F500BF95E4 /* AnswerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +91,12 @@
 		93396B3122503C6B00BF95E4 /* SkillsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsTests.swift; sourceTree = "<group>"; };
 		93396B3322504B0000BF95E4 /* SkillDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDetailViewController.swift; sourceTree = "<group>"; };
 		93396B3522504B1E00BF95E4 /* SkillDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		93396B372250FCC900BF95E4 /* QuestionsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsDataSource.swift; sourceTree = "<group>"; };
+		93396B392250FCF200BF95E4 /* QuestionsDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsDataSourceTests.swift; sourceTree = "<group>"; };
+		93396B3B2250FDA100BF95E4 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		93396B3D2250FDB300BF95E4 /* QuestionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTests.swift; sourceTree = "<group>"; };
+		93396B3F225100D700BF95E4 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		93396B41225100F500BF95E4 /* AnswerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +186,7 @@
 				93396B0E225008E800BF95E4 /* CategoryDataSource.swift */,
 				93396B1F2250308500BF95E4 /* SubCategoryDataSource.swift */,
 				93396B2B22503BAB00BF95E4 /* SkillsDataSource.swift */,
+				93396B372250FCC900BF95E4 /* QuestionsDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -184,6 +197,7 @@
 				93396B1722500ABB00BF95E4 /* CategoryDataSourceTests.swift */,
 				93396B21225030B500BF95E4 /* SubCategoryDataSourceTests.swift */,
 				93396B2D22503BD300BF95E4 /* SkillsDataSourceTests.swift */,
+				93396B392250FCF200BF95E4 /* QuestionsDataSourceTests.swift */,
 			);
 			path = DataSourceTests;
 			sourceTree = "<group>";
@@ -194,6 +208,8 @@
 				93396B122250096B00BF95E4 /* Category.swift */,
 				93396B232250312500BF95E4 /* SubCategory.swift */,
 				93396B2F22503C5700BF95E4 /* Skill.swift */,
+				93396B3B2250FDA100BF95E4 /* Question.swift */,
+				93396B3F225100D700BF95E4 /* Answer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +220,8 @@
 				93396B152250099300BF95E4 /* CategoryTests.swift */,
 				93396B252250314B00BF95E4 /* SubCategoryTests.swift */,
 				93396B3122503C6B00BF95E4 /* SkillsTests.swift */,
+				93396B3D2250FDB300BF95E4 /* QuestionTests.swift */,
+				93396B41225100F500BF95E4 /* AnswerTests.swift */,
 			);
 			path = ModelTests;
 			sourceTree = "<group>";
@@ -363,11 +381,14 @@
 			files = (
 				93396B242250312500BF95E4 /* SubCategory.swift in Sources */,
 				93396B282250365600BF95E4 /* SkillsViewController.swift in Sources */,
+				93396B382250FCC900BF95E4 /* QuestionsDataSource.swift in Sources */,
+				93396B40225100D700BF95E4 /* Answer.swift in Sources */,
 				93396ADF224FF61800BF95E4 /* CategoriesViewController.swift in Sources */,
 				93396B0F225008E800BF95E4 /* CategoryDataSource.swift in Sources */,
 				93396B3422504B0000BF95E4 /* SkillDetailViewController.swift in Sources */,
 				93396ADD224FF61800BF95E4 /* AppDelegate.swift in Sources */,
 				93396B2C22503BAB00BF95E4 /* SkillsDataSource.swift in Sources */,
+				93396B3C2250FDA100BF95E4 /* Question.swift in Sources */,
 				93396B1B2250239C00BF95E4 /* SubCategoriesViewController.swift in Sources */,
 				93396B3022503C5700BF95E4 /* Skill.swift in Sources */,
 				93396B132250096B00BF95E4 /* Category.swift in Sources */,
@@ -380,7 +401,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				93396B3622504B1E00BF95E4 /* SkillDetailViewControllerTests.swift in Sources */,
+				93396B42225100F500BF95E4 /* AnswerTests.swift in Sources */,
 				93396B262250314B00BF95E4 /* SubCategoryTests.swift in Sources */,
+				93396B3A2250FCF200BF95E4 /* QuestionsDataSourceTests.swift in Sources */,
 				93396B2A2250367C00BF95E4 /* SkillsViewControllerTests.swift in Sources */,
 				93396B1822500ABB00BF95E4 /* CategoryDataSourceTests.swift in Sources */,
 				93396B162250099300BF95E4 /* CategoryTests.swift in Sources */,
@@ -388,6 +411,7 @@
 				93396B1E225023F500BF95E4 /* SubCategoriesViewControllerTests.swift in Sources */,
 				93396B0C224FFDA700BF95E4 /* CategoriesViewControllerTests.swift in Sources */,
 				93396B3222503C6B00BF95E4 /* SkillsTests.swift in Sources */,
+				93396B3E2250FDB300BF95E4 /* QuestionTests.swift in Sources */,
 				93396AF2224FF61A00BF95E4 /* OctoTests.swift in Sources */,
 				93396B22225030B500BF95E4 /* SubCategoryDataSourceTests.swift in Sources */,
 			);

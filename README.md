@@ -21,7 +21,7 @@ As a user I would like to take a skills based test in order to better represent 
 
 `Ex: Technology > Gaming, Hardware, IT, Programming, Software, Tech Repairs`
 
-### 👨🏼‍💻 Story - I see a list of skills
+### ✅ Story - I see a list of skills
 
 `GIVEN:` I can see a list of skill sub categories.
 `WHEN:` I tap on a sub category.
@@ -29,11 +29,11 @@ As a user I would like to take a skills based test in order to better represent 
 
 `Ex: Swift, TypeScript, JavaScript, Java`
 
-### Story - I see a Multiple choice question
+### 👨🏼‍💻 Story - I see a Multiple choice question
 
 `GIVEN:` I can see a list of skills.
 `WHEN:` I tap on a skill.
-`THEN:` I see a Multiple choice question.
+`THEN:` I see a multiple choice question.
 
 ### Story - I see '1 of 10 questions'
 
@@ -70,6 +70,19 @@ As a user I would like to take a skills based test in order to better represent 
 `GIVEN:` I answer all questoins.
 `WHEN:` I tap on the 'Next Question' button.
 `THEN:` I see a summary of my results.
+
+### Story - I see a count down timer
+
+`GIVEN:` I see a Multiple choice question.
+`THEN:` I see a timer containing the remaining seconds to answer the question.
+`AND:` The timer is approaching zero seconds.
+
+### Story - I see the question answer wrong when the time runs out
+
+`GIVEN:` I see timer counting down.
+`WHEN:` The timer reacher zero.
+`THEN:` I get the question wrong.
+`AND:` I see the next question.
 
 ### Backlog
 

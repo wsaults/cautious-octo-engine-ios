@@ -14,10 +14,9 @@ class SubCategoriesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            let names = ["Gaming, Hardware, IT, Programming, Software, Tech Repairs"]
+            let names = ["Gaming", "Hardware", "IT", "Programming", "Software", "Tech Repairs"]
             for name in names {
-                let subCategory = SubCategory(name: name)
-                dataSource.subCategories.append(subCategory)
+                dataSource.subCategories.append(SubCategory(name: name))
             }
             tableView.dataSource = dataSource
         }

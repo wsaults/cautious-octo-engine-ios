@@ -10,4 +10,23 @@ import UIKit
 
 class SkillDetailViewController: UIViewController {
     
+    private var dataSource = QuestionsDataSource()
+
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            let question = Question(text: "How many bits are used to store an Int?")
+            dataSource.questions.append(question)
+            
+            let answers = ["16-bit", "32-bit", "64-bit", "It depends on the device"]
+            for answer in answers {
+                dataSource.answers.append(Answer(text: answer))
+            }
+            
+            tableView.dataSource = dataSource
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }
